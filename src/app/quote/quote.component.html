@@ -1,18 +1,18 @@
+
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
       <h1>Quotes</h1>
       <hr>
       <ul>
         <li *ngFor='let quote of quotes let i = index'>
           {{quote.quote}}
          <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
-         <i class="fa fa-thumbs-up" (click)="upvote(i)"></i><br>
-         <i class="fa fa-thumbs-down" (click)="upvote(i)"></i><br>
-         <i class="fa fa-trash"(click)= 'quoteComplete(true)'></i>
-       </li>
-      </ul>
+         <i class="fa fa-thumbs-up"(click)="upvote(i)" aria-hidden="true"></i>
+         <i class="fa fa-thumbs-down"(click)= "downvote(i)"aria-hidden="true"></i>
 
+        </li>
+      </ul>
     </div>
 
   </div>
