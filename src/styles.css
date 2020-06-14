@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body{
   background-color: black;
-  color: green;
+  color: white;
+  text-align: center;
 }
 .fa{
   color: red;
+}
+ul{
+  list-style-type: none;
 }
