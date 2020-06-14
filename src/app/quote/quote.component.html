@@ -2,9 +2,9 @@
   <h1>Quotes</h1>
   <hr>
   <ul>
-    <li *ngFor='let quote of quotes'>
+    <li *ngFor='let quote of quotes let i = index'>
       {{quote.quote}}
-      <app-quote-detail [quote]='quote'></app-quote-detail>
+     <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
     </li>
   </ul>
 </div>
