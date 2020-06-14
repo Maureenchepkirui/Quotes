@@ -7,10 +7,11 @@
         <li *ngFor='let quote of quotes let i = index'>
           {{quote.quote}}
          <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
-
          <button class="btn btn-primary" (click)="upvote(i)">Upvote</button><br>
+         <br>
          <button class="btn btn-primary" (click)="downvote(i)">Downvote</button><br>
-         <button (click)= 'quoteComplete(true)'>Delete</button>
+         <br>
+         <button (click)= 'quoteComplete(true)'>Delete</button><br>
 
         </li>
       </ul>
