@@ -3,18 +3,16 @@
   <div class="row">
     <div class="col-md-6">
       <h1>Quotes</h1>
-      <hr>
-      <ul>
-        <li *ngFor='let quote of quotes let i = index'>
-          {{quote.quote}}
-         <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
-         <i class="fa fa-thumbs-up"(click)="upvote(i)" aria-hidden="true"></i>
-         <i class="fa fa-thumbs-down"(click)= "downvote(i)"aria-hidden="true"></i>
+    <ul>
+      <div *ngFor='let quote of quotes let i = index' >
+        <li appHighlight>{{quote.quote}}</li>
 
-        </li>
-      </ul>
-    </div>
+          <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
+           <i class="fa fa-thumbs-up"(click)="upvote(i)" aria-hidden="true"></i><br>
+           <i class="fa fa-thumbs-down"(click)= "downvote(i)"aria-hidden="true"></i><br>
 
-  </div>
 
-</div>
+      </div>
+    </ul>
+
+    

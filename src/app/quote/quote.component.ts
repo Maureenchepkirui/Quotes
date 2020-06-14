@@ -11,6 +11,7 @@ quotes:Quote[]=[
   new Quote(2,'"In whatever you do,do it to your best"','Henry Dru'),
 
 ];
+
 deleteQuote(toDelete, index){
    if (toDelete) {
      this.quotes.splice(index,1);
@@ -22,7 +23,7 @@ deleteQuote(toDelete, index){
 downvote(i){
     this.quotes[i].downvotes+=1
   }
-
+  
 constructor() { }
 
 ngOnInit() {

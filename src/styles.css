@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  background-color: black;
-  color: white;
-  text-align: center;
+
+  color: yellow;
+  background-image: url("https://www.learnbusinessstudies.com/wp-content/uploads/2019/02/Pexels-4.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 .fa{
   color: red;
 }
 ul{
   list-style-type: none;
+}
+h1{
+  text-align: center;
 }
