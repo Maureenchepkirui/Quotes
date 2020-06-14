@@ -7,8 +7,8 @@ import {Quote  } from "../quote";
 })
 export class QuoteComponent implements OnInit {
 quotes:Quote[]=[
-  new Quote(1,'"Love the life you live, live the life you love."','Bob Marley'),
-  new Quote(2,'"In whatever you do,do it to your best"','Henry Dru'),
+  new Quote(1,'"Love the life you live, live the life you love."','Bob Marley',new Date(2020,1,1)),
+  new Quote(2,'"In whatever you do,do it to your best"','Henry Dru',new Date(2020,5,3)),
 
 ];
 
@@ -23,7 +23,21 @@ deleteQuote(toDelete, index){
 downvote(i){
     this.quotes[i].downvotes+=1
   }
-  
+  preNum:number
+ lastNum:number
+ counter:number
+
+ highestUpvote(){
+   this.preNum = 0
+   this.lastNum = 0
+
+   for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+     this.lastNum = this.quotes[this.counter].upvotes;
+     if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+   }
+   return  this.preNum
+ }
+
 constructor() { }
 
 ngOnInit() {
