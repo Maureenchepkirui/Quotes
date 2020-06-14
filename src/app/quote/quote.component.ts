@@ -37,6 +37,12 @@ downvote(i){
    }
    return  this.preNum
  }
+ addNewQuote(quote){
+   let quoteLength = this.quotes.length;
+   
+   quote.completeDate = new Date(quote.completeDate)
+   this.quotes.push(quote)
+ }
 
 constructor() { }
 

@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
 body{
 
   color: yellow;
   background-image: url("https://www.learnbusinessstudies.com/wp-content/uploads/2019/02/Pexels-4.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'El Messiri', sans-serif;
 
 }
 .fa{
   color: red;
+  font-size: 48px;
 }
 ul{
   list-style-type: none;
