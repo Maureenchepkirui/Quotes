@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h2 class="text-center">CREATE NEW QUOTE</h2>
   <hr>
-  <form #quoteForm='ngForm'>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
 
           <label for="quote">QUOTE</label>
@@ -16,6 +16,11 @@
           <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
           <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
             <p>Please input author</p>
+          </div>
+          <label for="publisher">PUBLISHER</label>
+          <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel" required>
+          <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+            <p>Please input publisher</p>
           </div>
 
       </div>
