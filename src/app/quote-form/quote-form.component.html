@@ -5,7 +5,7 @@
       <div class="form-group">
 
           <label for="quote">QUOTE</label>
-          <input type="text" required class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required>
+          <input type="text" required class="form-control" id="quote"placeholder="your quote here..." [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required>
           <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
             <p>Please input Quote</p>
           </div>
@@ -13,13 +13,19 @@
       <div class="form-group">
 
           <label for="author">AUTHOR</label>
-          <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+          <input type="text" required class="form-control" id="author" placeholder="enter author's name.." [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
           <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
             <p>Please input author</p>
           </div>
+    </div>
+    <div class="form-group">
 
-
-      </div>
+        <label for="name">NAME</label>
+        <input type="text" required class="form-control" id="name"placeholder="enter your name.."[(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p>Please input name</p>
+        </div>
+  </div>
       <div class="form-group">
           <label for="create">CREATION DATE</label>
           <input type='date' id="create"[(ngModel)]="newQuote.createDate" name="createDate" #createDate="ngModel" required required>
