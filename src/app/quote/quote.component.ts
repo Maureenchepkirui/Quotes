@@ -23,19 +23,19 @@ deleteQuote(toDelete, index){
 downvote(i){
     this.quotes[i].downvotes+=1
   }
-  preNum:number
+ originalNum:number
  lastNum:number
  counter:number
 
  highestUpvote(){
-   this.preNum = 0
+   this.originalNum = 0
    this.lastNum = 0
 
    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
      this.lastNum = this.quotes[this.counter].upvotes;
-     if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+     if(this.lastNum > this.originalNum){this.originalNum = this.lastNum}
    }
-   return  this.preNum
+   return  this.originalNum
  }
  addNewQuote(quote){
    let quoteLength = this.quotes.length;
