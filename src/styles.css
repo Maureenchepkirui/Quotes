@@ -7,6 +7,11 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'El Messiri', sans-serif;
+  border-style: dotted;
+  border-width: 3px;
+  border-left-width: 10px;
+  border-right-width: 10px;
+  border-color: red;
 
 }
 .fa{
