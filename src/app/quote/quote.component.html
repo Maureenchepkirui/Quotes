@@ -8,8 +8,8 @@
          <li appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0" >{{quote.quote}}</li>
           <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
            <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
-           <i class="fa fa-thumbs-up"(click)="upvote(i)" aria-hidden="true"></i><br>
-           <i class="fa fa-thumbs-down"(click)= "downvote(i)"aria-hidden="true"></i><br>
+           <i class="fa fa-thumbs-up"(click)="upvote(i)" aria-hidden="true"></i>
+           <i class="fa fa-thumbs-down"(click)= "downvote(i)"aria-hidden="true"></i>
          </div>
        </ul>
       </div>
